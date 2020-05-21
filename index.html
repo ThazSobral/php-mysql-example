@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="script.php" method="post">
+    <label for="name">Nome: </label>
+    <input type="text" name="name">
+    <label for="email">E-mail: </label>
+    <input type="email" name="email">
+    <label for="password">Senha: </label>
+    <input type="password" name="password">
+    <label for="repassword">Confirmação de Senha: </label>
+    <input type="password" name="repassword">
+    <input type="submit" value="ok" onclick="hello()">
+  </form>
+
+  <?php 
+    function hello () {
+      echo "hello"
+    }
+  ?>
+</body>
+</html>
