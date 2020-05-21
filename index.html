@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>PHP e Mysql - example</title>
 </head>
 <body>
-  <form action="script.php" method="post">
-    <label for="name">Nome: </label>
-    <input type="text" name="name">
-    <label for="email">E-mail: </label>
-    <input type="email" name="email">
-    <label for="password">Senha: </label>
-    <input type="password" name="password">
-    <label for="repassword">Confirmação de Senha: </label>
-    <input type="password" name="repassword">
-    <input type="submit" value="ok" onclick="hello()">
-  </form>
-
-  <?php 
-    function hello () {
-      echo "hello"
-    }
-  ?>
+  <main>
+    <h1>Cadastro</h1>
+    <form action="./scripts/script.php" method="post">
+      <label for="name">Nome: </label>
+      <input type="text" name="name">
+      <label for="email">E-mail: </label>
+      <input type="email" name="email">
+      <label for="password">Senha: </label>
+      <input type="password" name="password">
+      <label for="repassword">Confirmação de Senha: </label>
+      <input type="password" name="repassword">
+      <input type="submit" value="ok">
+    </form>
+    <table border="1">
+      <h2>Usuários Cadastrados</h2>
+      <tr>
+        <th>NOME</th>
+        <th>EMAIL</th>
+      </tr>
+      <tr>
+      </tr>
+    </table>
+  </main>
 </body>
 </html>
