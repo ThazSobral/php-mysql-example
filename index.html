@@ -4,31 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <title>PHP e Mysql - example</title>
 </head>
-<body>
-  <main>
-    <h1>Cadastro</h1>
-    <form action="./scripts/script.php" method="post">
-      <label for="name">Nome: </label>
-      <input type="text" name="name">
-      <label for="email">E-mail: </label>
-      <input type="email" name="email">
-      <label for="password">Senha: </label>
-      <input type="password" name="password">
-      <label for="repassword">Confirmação de Senha: </label>
-      <input type="password" name="repassword">
-      <input type="submit" value="ok">
+<body class="container">
+  <main 
+    class="d-flex flex-column justify-content-center align-items-center pt-5"
+  >
+    <h1>Cadastre-se</h1>
+    <form
+      action="./scripts/script.php"
+      method="post"
+      class="d-flex flex-column justify-content-center align-items-center px-4 rounded-lg"
+    >
+      <fieldset class="d-flex flex-column mt-3">
+        <label for="name">Nome</label>
+        <input
+          type="text"
+          name="name"
+          required
+          class="border-top-0 border-left-0 border-right-0 border-primary"
+        >
+      </fieldset>
+      <fieldset class="d-flex flex-column mt-3">
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          name="email"
+          required
+          class="border-top-0 border-left-0 border-right-0 border-primary"
+        >
+      </fieldset>
+      <fieldset class="d-flex flex-column mt-3">
+        <label for="repassword">Senha</label>
+        <input
+          type="password"
+          name="password"
+          required
+          pattern="^.{6,}"
+          title="6 caracteres ou mais"
+          class="border-top-0 border-left-0 border-right-0 border-primary"
+        >
+      </fieldset>
+      <fieldset class="d-flex flex-column mt-3">
+        <label for="repassword">Confirmação de senha</label>
+        <input
+          type="password"
+          name="repassword"
+          required
+          pattern="^.{6,}"
+          title="6 caracteres ou mais"
+          class="border-top-0 border-left-0 border-right-0 border-primary"
+        >
+      </fieldset>
+      <input type="submit" value="Cadastrar" class="btn btn-primary my-3">
     </form>
-    <table border="1">
-      <h2>Usuários Cadastrados</h2>
-      <tr>
-        <th>NOME</th>
-        <th>EMAIL</th>
-      </tr>
-      <tr>
-      </tr>
-    </table>
   </main>
 </body>
 </html>
